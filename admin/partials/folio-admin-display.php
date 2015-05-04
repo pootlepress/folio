@@ -16,16 +16,16 @@
 <?php do_action( 'before_folio_metabox' ); ?>
 <div class="folio-metabox">
 
-	<div class="folio-section">
+	<div class="folio-section pad2">
 
 		<div class="folio-rows-container">
-			<div class="folio-row" >
-				<div class="folio-cell" >
+			<div class="folio-row pad" >
+				<div class="folio-cell pad" >
 					<div class="folio-content" >
 						+ Add content
 					</div>
 				</div>
-				<div class="folio-cell" >
+				<div class="folio-cell pad" >
 					<div class="folio-content" >
 						+ Add content
 					</div>

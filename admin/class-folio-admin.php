@@ -122,8 +122,14 @@ class Folio_Admin {
 	}
 
 	public function folio_after_title(){
+
+		global $post;
+
+		if ( isset( $post ) && 'page' == $post->post_type ) {
 		?>
 		<a id="use-folio" class="button button-primary button-large" href="#">Use Folio</a>
+		<a id="use-default" class="button button-large" href="#">Switch to editor</a>
 		<?php
+		}
 	}
 }
