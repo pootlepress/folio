@@ -61,18 +61,6 @@ class Folio_Admin {
 	 */
 	public function enqueue_styles() {
 
-		/**
-		 * This function is provided for demonstration purposes only.
-		 *
-		 * An instance of this class should be passed to the run() function
-		 * defined in Folio_Loader as all of the hooks are defined
-		 * in that particular class.
-		 *
-		 * The Folio_Loader will then create the relationship
-		 * between the defined hooks and the functions defined in this
-		 * class.
-		 */
-
 		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/folio-admin.css', array(), $this->version, 'all' );
 
 	}
@@ -84,20 +72,24 @@ class Folio_Admin {
 	 */
 	public function enqueue_scripts() {
 
-		/**
-		 * This function is provided for demonstration purposes only.
-		 *
-		 * An instance of this class should be passed to the run() function
-		 * defined in Folio_Loader as all of the hooks are defined
-		 * in that particular class.
-		 *
-		 * The Folio_Loader will then create the relationship
-		 * between the defined hooks and the functions defined in this
-		 * class.
-		 */
-
 		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/folio-admin.js', array( 'jquery' ), $this->version, false );
 
 	}
 
+	public function folio_meta_box() {
+
+		add_meta_box(
+			'folio',
+			__( 'Folio', 'folio' ),
+			array( $this, 'folio_meta_callback' ),
+			'page'
+		);
+
+	}
+
+	public function folio_meta_callback(){
+
+		include 'partials/folio-admin-display.php';
+
+	}
 }
