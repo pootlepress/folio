@@ -1,2 +1,2 @@
-# pootle-page-builder
+# Folio
 A simple but powerful page builder from PootlePress
