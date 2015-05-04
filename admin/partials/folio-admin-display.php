@@ -12,4 +12,34 @@
  * @subpackage Folio/admin/partials
  */
 ?>
-<h1> Yo Buds </h1>
+
+<?php do_action( 'before_folio_metabox' ); ?>
+<div class="folio-metabox">
+
+	<div class="folio-section">
+
+		<div class="folio-rows-container">
+			<div class="folio-row" >
+				<div class="folio-cell" >
+					<div class="folio-content" >
+						+ Add content
+					</div>
+				</div>
+				<div class="folio-cell" >
+					<div class="folio-content" >
+						+ Add content
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="folio-add-row">
+			+ Add Row
+		</div>
+
+	</div>
+
+	<div class="folio-add-section"> + Add Section </div>
+
+</div>
+<?php do_action( 'after_folio_metabox' ); ?>

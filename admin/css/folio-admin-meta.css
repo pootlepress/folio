@@ -1,0 +1,60 @@
+#folio.postbox {
+    margin: 10px 0 0;
+    display: none;
+}
+#postdivrich #folio.postbox {
+    display: block;
+}
+.folio-metabox * {
+    padding: 7px;
+    box-sizing:border-box;
+}
+
+.folio-metabox {
+
+}
+
+.folio-section {
+    background: #eee;
+
+}
+
+.folio-add-section {
+    line-height: 70px;
+
+    border: 1px dashed #ccc;
+    font-size: 20px;
+    text-align: center;
+    margin: 25px 0 0;
+}
+
+.folio-rows-container {
+}
+
+.folio-add-row {
+    line-height: 70px;      font-size: 20px;   text-align: center;
+
+}
+
+.folio-row {
+    background: #ddd;
+    
+}
+
+.folio-row:after {
+    content:'';
+    display:block;
+    clear: both;
+}
+
+.folio-cell {
+    float: left;
+    width: 50%;
+}
+
+.folio-content{
+    background: #ccc;
+    font-size: 17px;
+    line-height: 34px;
+    text-align: center;
+}

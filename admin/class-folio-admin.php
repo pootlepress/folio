@@ -61,6 +61,14 @@ class Folio_Admin {
 	 */
 	public function enqueue_styles() {
 
+		global $post;
+
+		if ( isset( $post ) && 'page' == $post->post_type ) {
+
+			wp_enqueue_style( $this->plugin_name . '-meta-styles', plugin_dir_url( __FILE__ ) . 'css/folio-admin-meta.css', array(), $this->version, 'all' );
+
+		}
+
 		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/folio-admin.css', array(), $this->version, 'all' );
 
 	}
@@ -72,10 +80,24 @@ class Folio_Admin {
 	 */
 	public function enqueue_scripts() {
 
+		global $post;
+
+		if ( isset( $post ) && 'page' == $post->post_type ) {
+
+			wp_enqueue_script( $this->plugin_name . '-meta-script', plugin_dir_url( __FILE__ ) . 'js/folio-admin-meta.js', array( 'jquery' ), $this->version, false );
+
+		}
+
 		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/folio-admin.js', array( 'jquery' ), $this->version, false );
 
 	}
 
+	/**
+	 * Registers the meta box
+	 *
+	 * @since    1.0.0
+	 * @access   public
+	 */
 	public function folio_meta_box() {
 
 		add_meta_box(
@@ -87,9 +109,21 @@ class Folio_Admin {
 
 	}
 
+	/**
+	 * The meta box call back
+	 *
+	 * @since    1.0.0
+	 * @access   public
+	 */
 	public function folio_meta_callback(){
 
 		include 'partials/folio-admin-display.php';
 
+	}
+
+	public function folio_after_title(){
+		?>
+		<a id="use-folio" class="button button-primary button-large" href="#">Use Folio</a>
+		<?php
 	}
 }
