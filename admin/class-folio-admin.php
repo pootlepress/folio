@@ -89,8 +89,8 @@ class Folio_Admin {
 				$this->plugin_name . '-meta-dnd',
 				plugin_dir_url( __FILE__ ) . 'js/folio-admin-dnd.js',
 				array(
-					'jquery-ui-draggable',
-					'jquery-ui-droppable',
+					'jquery-ui-core',
+					'jquery-ui-sortable',
 					'jquery-ui-resizable',
 				),
 				$this->version,

@@ -39,6 +39,8 @@ label[for=folio-hide],
 .folio-section {
     background: #eee;
 }
+
+/* Add stuff triggers */
 .folio-add{
     opacity:0.34;
     cursor: pointer;

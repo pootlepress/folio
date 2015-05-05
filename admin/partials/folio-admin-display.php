@@ -24,6 +24,12 @@
 					<div class="folio-content" >
 						Lorem Ipsum dolor sit amet consectetur...
 					</div>
+					<div class="folio-content" >
+						Consectetur dolor sit lorem...
+					</div>
+					<div class="folio-content" >
+						sit amet consectetur dolor ipsum morel...
+					</div>
 					<div class="folio-add-content folio-add" >
 						+ Add content
 					</div>
@@ -31,6 +37,12 @@
 				<div class="folio-cell" >
 					<div class="folio-content" >
 						Dolor sit amet lorem Ipsum consectetur...
+					</div>
+					<div class="folio-content" >
+						Amet ipsum lorem Ipsum consectetur...
+					</div>
+					<div class="folio-content" >
+						Sit amet dolor lorem Ipsum consectetur...
 					</div>
 					<div class="folio-add-content folio-add" >
 						+ Add content
